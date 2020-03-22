@@ -1,0 +1,118 @@
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  height: 100px;
+
+  h1 {
+    margin: 0 1em;
+  }
+
+  .logo {
+    background: url("../../assets/logo_negro_verde.png") no-repeat;
+    display: block;
+    font: 0/0 a;
+    background-size: contain;
+    width: 150px;
+    height: 80px;
+    border: 0;
+    outline: 0;
+  }
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  z-index: 7;
+}
+
+.menu li {
+  float: left;
+  width: 16%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  color: #5b5b5b;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  //font-weight: bold;
+  z-index: 9;
+  padding-bottom: .75em;
+  transition: color .4s ease-in-out;
+
+  &:hover {
+    color: white;
+  }
+}
+
+li.slider {
+  width: 16%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  -webkit-transition: left 0.4s, background-color 0.4s;
+  transition: left 0.4s, background-color 0.4s;
+}
+
+.menu li:nth-child(1):hover ~ .slider,
+.menu li:nth-child(1):focus ~ .slider,
+.menu li:nth-child(1):active ~ .slider {
+  left: 0;
+  background-color: #3498db;
+}
+
+.menu li:nth-child(2):hover ~ .slider,
+.menu li:nth-child(2):focus ~ .slider,
+.menu li:nth-child(2):active ~ .slider {
+  left: 16%;
+  background-color: #9b59b6;
+  color: white;
+}
+
+.menu li:nth-child(3):hover ~ .slider,
+.menu li:nth-child(3):focus ~ .slider,
+.menu li:nth-child(3):active ~ .slider {
+  left: 32%;
+  background-color: #e67e22;
+  color: white;
+}
+
+.menu li:nth-child(4):hover ~ .slider,
+.menu li:nth-child(4):focus ~ .slider,
+.menu li:nth-child(4):active ~ .slider {
+  left: 48%;
+  background-color: #16a085;
+  color: white;
+}
+
+.menu li:nth-child(5):hover ~ .slider,
+.menu li:nth-child(5):focus ~ .slider,
+.menu li:nth-child(5):active ~ .slider {
+  left: 64%;
+  background-color: #e74c3c;
+  color: white;
+}
+
+.menu li:nth-child(6):hover ~ .slider,
+.menu li:nth-child(6):focus ~ .slider,
+.menu li:nth-child(6):active ~ .slider {
+  left: 80%;
+  background-color: #f5c144;
+  color: white;
+}

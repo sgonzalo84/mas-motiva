@@ -1,16 +1,5 @@
-.hero-image {
-  background-image: url("https://images.unsplash.com/photo-1517035617202-9b027c722423?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+@import "~styles/variables";
 
-.hero-div {
-  min-height: 520px;
-  height: calc(100vh - 180px);
-
-  h1 {
-    color: white;
-    font-size: 3.5em;
-    text-shadow: 1px 1px #5b5b5b;
-  }
+.content-wrapper {
+  min-height: calc(100vh - 100px);
 }

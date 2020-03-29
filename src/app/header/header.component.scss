@@ -1,3 +1,7 @@
+@import "~styles/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
 
 header {
   display: flex;
@@ -6,7 +10,7 @@ header {
   height: 100px;
 
   h1 {
-    margin: 0 1em;
+    margin: 0 .5em;
   }
 
   .logo {
@@ -14,7 +18,7 @@ header {
     display: block;
     font: 0/0 a;
     background-size: contain;
-    width: 150px;
+    width: 120px;
     height: 80px;
     border: 0;
     outline: 0;
@@ -29,90 +33,125 @@ header {
   height: 50px;
   position: relative;
   z-index: 7;
-}
 
-.menu li {
-  float: left;
-  width: 16%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.menu a {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: flex-end;
-  color: #5b5b5b;
-  text-decoration: none;
-  position: relative;
-  font-size: 18px;
-  //font-weight: bold;
-  z-index: 9;
-  padding-bottom: .75em;
-  transition: color .4s ease-in-out;
-
-  &:hover {
-    color: white;
+  li {
+    float: left;
+    width: 20%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
-}
 
-li.slider {
-  width: 16%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 8;
-  -webkit-transition: left 0.4s, background-color 0.4s;
-  transition: left 0.4s, background-color 0.4s;
+  li.slider {
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    -webkit-transition: left 0.4s, background-color 0.4s;
+    transition: left 0.4s, background-color 0.4s;
+  }
+
+  a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    color: $text-color;
+    text-decoration: none;
+    position: relative;
+    font-size: 15px;
+    z-index: 9;
+    padding-bottom: .5em;
+    transition: color .4s ease-in-out;
+
+    &:hover {
+      color: white;
+    }
+  }
 }
 
 .menu li:nth-child(1):hover ~ .slider,
 .menu li:nth-child(1):focus ~ .slider,
 .menu li:nth-child(1):active ~ .slider {
   left: 0;
-  background-color: #3498db;
+  background-color: $green;
 }
 
 .menu li:nth-child(2):hover ~ .slider,
 .menu li:nth-child(2):focus ~ .slider,
 .menu li:nth-child(2):active ~ .slider {
-  left: 16%;
-  background-color: #9b59b6;
+  left: 20%;
+  background-color: $purple;
   color: white;
 }
 
 .menu li:nth-child(3):hover ~ .slider,
 .menu li:nth-child(3):focus ~ .slider,
 .menu li:nth-child(3):active ~ .slider {
-  left: 32%;
-  background-color: #e67e22;
+  left: 40%;
+  background-color: #fe346e;
   color: white;
 }
 
 .menu li:nth-child(4):hover ~ .slider,
 .menu li:nth-child(4):focus ~ .slider,
 .menu li:nth-child(4):active ~ .slider {
-  left: 48%;
-  background-color: #16a085;
+  left: 60%;
+  background-color: #00a8cc;
   color: white;
 }
 
 .menu li:nth-child(5):hover ~ .slider,
 .menu li:nth-child(5):focus ~ .slider,
 .menu li:nth-child(5):active ~ .slider {
-  left: 64%;
-  background-color: #e74c3c;
+  left: 80%;
+  background-color: #c81912;
   color: white;
 }
 
-.menu li:nth-child(6):hover ~ .slider,
-.menu li:nth-child(6):focus ~ .slider,
-.menu li:nth-child(6):active ~ .slider {
-  left: 80%;
-  background-color: #f5c144;
-  color: white;
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+  header {
+    .logo {
+      width: 130px;
+    }
+  }
+  .menu {
+    a {
+      font-size: 18px;
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+  header {
+    .logo {
+      width: 150px;
+    }
+
+    h1 {
+      margin: 0 1em;
+    }
+
+    .logo {
+      background: url("../../assets/logo_negro_verde.png") no-repeat;
+      display: block;
+      font: 0/0 a;
+      background-size: contain;
+      width: 150px;
+      height: 80px;
+      border: 0;
+      outline: 0;
+    }
+  }
+  .menu {
+    a {
+      font-size: 18px;
+    }
+  }
 }

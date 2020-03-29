@@ -37,7 +37,7 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes,
-      {enableTracing: true} // <-- debugging purposes only
+      {scrollPositionRestoration: 'top'} // <-- debugging purposes only
     )
   ],
   providers: [],

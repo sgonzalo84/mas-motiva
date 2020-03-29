@@ -3,7 +3,7 @@
     <a class="logo" routerLink="/"></a>
   </h1>
 
-  <ul class="menu">
+  <ul class="menu d-none d-md-block">
     <li><a routerLink="oferta" routerLinkActive="active">¿Qué ofrecemos?</a></li>
     <li><a routerLink="publico" routerLinkActive="active">¿Para quien?</a></li>
     <li><a routerLink="valores" routerLinkActive="active">Nuestros valores</a></li>
@@ -11,4 +11,24 @@
     <li><a href="#contact" routerLinkActive="active">Contacto</a></li>
     <li class="slider"></li>
   </ul>
+
+  <div class="fab" [class.visible]="menuVisible">
+    <div class="fab-btn" (click)="menuVisible = !menuVisible">
+      <span><i class="fas fa-bars"></i> </span>
+    </div>
+    <div class="fab-content">
+
+      <a class="white-logo" routerLink="/" (click)="menuVisible=false"></a>
+
+      <ul>
+        <li><a routerLink="oferta" routerLinkActive="active" (click)="menuVisible=false">¿Qué ofrecemos?</a></li>
+        <li><a routerLink="publico" routerLinkActive="active" (click)="menuVisible=false">¿Para quien?</a></li>
+        <li><a routerLink="valores" routerLinkActive="active" (click)="menuVisible=false">Nuestros valores</a></li>
+        <li><a routerLink="galeria" routerLinkActive="active" (click)="menuVisible=false">Galería</a></li>
+        <li><a href="#contact" routerLinkActive="active" (click)="menuVisible=false">Contacto</a></li>
+        <li class="slider"></li>
+      </ul>
+    </div>
+  </div>
+
 </header>

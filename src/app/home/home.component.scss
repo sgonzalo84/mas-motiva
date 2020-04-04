@@ -8,20 +8,6 @@
   font-size: 1.1em;
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-
-  li {
-    flex: 0 0 100%;
-    padding: .5em 1em;
-    display: flex;
-    align-items: center;
-  }
-}
-
 .our-mission {
 
   .icon {
@@ -29,12 +15,6 @@ ul {
     font-size: 1.75em;
     color: $green;
   }
-}
-
-.icon {
-  margin-right: .5em;
-  font-size: 1.75em;
-  color: $green;
 }
 
 .purple {

@@ -1,6 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
@@ -38,7 +40,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       {scrollPositionRestoration: 'top'} // <-- debugging purposes only
-    )
+    ),
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -152,10 +152,10 @@ ul {
     opacity: 0;
     transition: opacity 0.4s ease;
     color: #fff;
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
     top: 0;
-    left: 0;
+    right: 64px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -165,19 +165,22 @@ ul {
       background: url("/assets/logo_blanco.png") no-repeat;
       display: block;
       background-size: contain;
-      width: 160px;
-      height: 90px;
+      width: 150px;
+      height: 80px;
       margin-bottom: 24px;
     }
 
     li {
-      padding: 1.5em 0;
+      padding: 1.25em 0;
       text-align: right;
     }
 
     a {
       color: white;
       font-size: 1.5em;
+      display: block;
+      text-align: right;
+      width: 100%;
     }
 
   }

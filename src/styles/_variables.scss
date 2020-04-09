@@ -1,6 +1,10 @@
 $green: #b0cb1f;
 $purple: #673AB7;
 $text-color: #555;
+$pink: #dc2ade;
+$yellow: #e8f044;
+$red: #ce0f3d;
+$blue: #00a8cc;
 /* You can add global styles to this file, and also import other style files */
 $theme-colors: (
   "primary": $green,
@@ -25,4 +29,12 @@ ul {
     font-size: 1.75em;
     color: $green;
   }
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-purple {
+  color: $purple;
 }

@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+import {CarouselModule} from 'ngx-bootstrap/carousel';
 
 
 import {AppComponent} from './app.component';
@@ -14,13 +14,15 @@ import {OfferComponent} from './offer/offer.component';
 import {TargetComponent} from './target/target.component';
 import {ValuesComponent} from './values/values.component';
 import {GalleryComponent} from './gallery/gallery.component';
+import {ContactComponent} from './contact/contact.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'oferta', component: OfferComponent},
   {path: 'publico', component: TargetComponent},
   {path: 'valores', component: ValuesComponent},
-  {path: 'galeria', component: GalleryComponent}
+  {path: 'galeria', component: GalleryComponent},
+  {path: 'contacto', component: ContactComponent}
 ];
 
 @NgModule({
@@ -33,13 +35,14 @@ const appRoutes: Routes = [
     OfferComponent,
     TargetComponent,
     ValuesComponent,
-    GalleryComponent
+    GalleryComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes,
-      {scrollPositionRestoration: 'top'} // <-- debugging purposes only
+      {scrollPositionRestoration: 'top'}
     ),
     CarouselModule.forRoot()
   ],

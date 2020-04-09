@@ -23,6 +23,7 @@
 .headline {
   padding: 24px;
   background-color: rgba($text-color, .4);
+  height: 80%;
 }
 
 .cta {
@@ -89,6 +90,7 @@
   .headline {
     padding: 0;
     background-color: transparent;
+    height: auto;
   }
 }
 

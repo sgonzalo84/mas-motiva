@@ -1,5 +1,7 @@
+@import "~styles/variables";
+
 .carousel-container {
-  background: linear-gradient(130deg, #e8f044, #dc2ade);
+  background: linear-gradient(130deg, $yellow, $pink);
   background-size: 200% 200%;
   animation: gradient 16s ease infinite;
 }

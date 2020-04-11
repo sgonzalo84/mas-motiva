@@ -1,4 +1,7 @@
 @import "~styles/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
 
 .carousel-container {
   background: linear-gradient(130deg, $yellow, $pink);
@@ -14,10 +17,9 @@
   }
 
   .carousel-control {
-    width: 10%;
+    width: 20%;
     align-items: flex-start;
-    padding: 135px 16px 0 16px;
-
+    
     .carousel-control-prev-icon, .carousel-control-next-icon {
       width: 35px;
       height: 35px;
@@ -40,38 +42,40 @@
     }
   }
 
-  .carousel-indicators {
-    position: relative;
-    order: 2;
-
-    li {
-      width: 25px;
-      height: 25px;
-      cursor: pointer;
-      border: 1px solid #ccc;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      border-radius: 50%;
-      opacity: 0.4;
-      overflow: hidden;
-      transition: all .4s ease-in;
-      vertical-align: middle;
-    }
-
-    .active {
-      width: 50px;
-      height: 50px;
-      opacity: 1;
-      transition: all .2s;
-    }
-  }
+  //.carousel-indicators {
+  //  position: relative;
+  //  order: 2;
+  //
+  //  li {
+  //    width: 15px;
+  //    height: 15px;
+  //    cursor: pointer;
+  //    border: 1px solid #ccc;
+  //    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  //    border-radius: 50%;
+  //    opacity: 0.4;
+  //    overflow: hidden;
+  //    transition: all .4s ease-in;
+  //    vertical-align: middle;
+  //    margin: 0 8px;
+  //  }
+  //
+  //  .active {
+  //    width: 18px;
+  //    height: 18px;
+  //    opacity: 1;
+  //    transition: all .2s;
+  //  }
+  //}
 
   .carousel-item {
-    padding: 3em 5em;
+    padding: 4em 0;
   }
 
   .blockquote {
     position: relative;
     font-size: 1.1rem;
+    padding: 2em 1.25em;
 
     .custom-icon {
       width: 50px;
@@ -85,8 +89,24 @@
       left: 50px;
     }
   }
+}
 
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+  .quote-carousel {
+    .carousel-item {
+      padding: 3em 5em;
+    }
 
+    .carousel-control {
+      width: 10%;
+      padding: 135px 16px 0 16px;
+    }
+
+    .blockquote {
+      padding: 3rem;
+    }
+  }
 }
 
 @keyframes gradient {
